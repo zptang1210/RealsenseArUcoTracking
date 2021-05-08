@@ -49,7 +49,6 @@
   <ItemGroup>
     <Content Include="config.json" />
     <Content Include="tag\tag_DICT_5X5_50\DICT_5X5_50_0.png" />
-    <Content Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

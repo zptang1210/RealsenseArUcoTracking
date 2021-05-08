@@ -11,15 +11,13 @@ This project detects ArUco Marker via OpenCV, extracts the marker's depth inform
 * config.json: configuration file
 
 ## Installation
-* Install Intel Realsense SDK 2.0 and its python wrapper
+* Install Intel Realsense SDK 2.0 and its python wrapper (pip install pyrealsense2)
 * Python 3.9 (other version should also be acceptable)
 * conda install numpy
 * conda install matplotlib
 * pip install opencv-contrib-python
 
-## Usage
-* ArUco marker generation: set the properties *dict_to_use* and *id* in config.json, and run 'python ArUcoGenerator.py'. The program will generate the marker with corresponding id from the given dictionary, and save it to the tag folder.
-* ArUco marker detection:  run 'python ArUcoDetector.py'. The program will show a window of real-time result. If property *visualize* is set true in config.json, the program will collect 3d points detected from every 20s, and plot them out. The 3d points is in the camera's coordinate system, where the origin sits in the center of the camera sensor, the x-axis directs to the right, the y-axis directs downward, and z-axis directs forward (see the SDK document for further details). All detected points are saved in *trajectory* variable of a TrajectoryTracker object. It is a dictionary object of the form like {id1: [(timestamp, x, y, z), ...], id2: ..., ...}
+develpoed in Windows 10 and Visual Studio 2019, tested with Intel RealSense Depth Camera D455. Linux environment should also be usable as long as the sdk is deployed.
 
 ## configuration
 You can fiddle with config.json to control the project parameters:
@@ -27,6 +25,10 @@ You can fiddle with config.json to control the project parameters:
 * id: To specify the id of the marker that you want to generate in ArUcoGenerator.py
 * visualize: visualize the result
 * grey_color: the color for masking the RGB image after aligning with the depth image (no need to change)
+
+## Usage
+* ArUco marker generation: set the properties *dict_to_use* and *id* in config.json, and run 'python ArUcoGenerator.py'. The program will generate the marker with corresponding id from the given dictionary, and save it to the tag folder.
+* ArUco marker detection:  run 'python ArUcoDetector.py'. The program will show a window of real-time result. If property *visualize* is set true in config.json, the program will collect 3d points detected from every 20s, and plot them out. The 3d points is in the camera's coordinate system, where the origin sits in the center of the camera sensor, the x-axis directs to the right, the y-axis directs downward, and z-axis directs forward (see the SDK document for further details). All detected points are saved in *trajectory* variable of a TrajectoryTracker object. It is a dictionary object of the form like {id1: [(timestamp, x, y, z), ...], id2: ..., ...}
 
 ## Reference
 1. https://www.pyimagesearch.com/2020/12/21/detecting-aruco-markers-with-opencv-and-python/

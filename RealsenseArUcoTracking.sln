@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RealsenseArUcoTracking", "RealsenseObjectTracking\RealsenseArUcoTracking.pyproj", "{1FD081E6-D6B7-458A-B94E-F650CDA7279D}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RealsenseArUcoTracking", "RealsenseArUcoTracking\RealsenseArUcoTracking.pyproj", "{1FD081E6-D6B7-458A-B94E-F650CDA7279D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

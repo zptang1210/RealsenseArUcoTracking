@@ -1,0 +1,63 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1fd081e6-d6b7-458a-b94e-f650cda7279d</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>RealsenseTracker.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>RealsenseArUcoTracking</Name>
+    <RootNamespace>RealsenseObjectTracking</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|yuda</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ArUcoDetector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArUcoGenerator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Camera.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RealsenseTracker.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrajectoryTracker.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|yuda" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tag\" />
+    <Folder Include="tag\tag_DICT_5X5_50\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.json" />
+    <Content Include="tag\tag_DICT_5X5_50\DICT_5X5_50_0.png" />
+    <Content Include="readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
